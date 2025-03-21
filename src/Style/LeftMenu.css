@@ -1,0 +1,224 @@
+.leftMenu{
+    width: 350px;
+    height: 100%;
+    min-height: 100vh;
+    background: rgba(67, 73, 187, 0.6);
+    /* backdrop-filter: blur(10px); */
+    padding: 25px 30px; 
+    overflow: hidden;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.leftMenu .logoContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.leftMenu .logoContainer i{
+    font-size: 30px;
+}
+
+.leftMenu .logoContainer i:nth-of-type(2){
+    font-size: 25px;
+}
+
+.searchBox {
+    display: flex;  /* Dùng flexbox để căn chỉnh */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: space-between; /* Đẩy icon sang phải */
+    width: 100%;
+    height: 45px;
+    position: relative;
+    margin-top: 20px;
+    color: rgb(109, 24, 135);
+    border-radius: 20px;
+    border: 2px solid black;
+    padding: 0 10px; /* Tạo khoảng cách bên trong */
+}
+
+.searchBox input {
+    flex: 1; /* Input sẽ co giãn hết phần còn lại */
+    height: 100%;
+    border: none; /* Bỏ viền thừa */
+    border-radius: 20px;
+    padding: 7px;
+    outline: none;
+    background: transparent;
+}
+
+.searchBox .searchIcon {
+    font-size: 18px; /* Kích thước icon */
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchBox input::placeholder {
+    color: white;
+  }
+
+.MenuContainer{
+    margin: 25px 5px;
+}
+
+.MenuContainer .title{
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    align-items: center;
+}
+
+.MenuContainer ul{
+    width: 100%;
+    padding: 0;
+}
+
+.MenuContainer ul li{
+    list-style: none;
+    margin: 20px 0;
+    width: 100%;
+    padding: 5px 0;
+    position: relative;
+    text-align: center;
+}
+
+.MenuContainer ul li a{
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+    font-size: 14px;
+}
+
+.MenuContainer ul li a svg {
+    font-size: 30px;
+    margin-right: 15px;
+}
+
+@keyframes neonGlow {
+    0% { box-shadow: 0 0 5px red, 0 0 10px red; }
+    50% { box-shadow: 0 0 10px blue, 0 0 20px blue; }
+    100% { box-shadow: 0 0 5px red, 0 0 10px red; }
+}
+
+.MenuContainer ul li:hover,
+.MenuContainer ul li.active {
+    background: black;
+    color: white;
+    border-radius: 20px;
+    animation: neonGlow 1s infinite alternate;
+}
+
+.MenuContainer ul li:hover a,
+.MenuContainer ul li.active a {
+    color: white;
+}
+
+.playListContainer{
+    cursor: pointer;
+    margin: 15px 0;
+}
+
+.playListContainer .nameContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.playListContainer .playListScroll{
+    height: 140px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: relative;
+}
+
+.playListContainer .playListScroll .playList{
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    font-size: 15px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.playListContainer .playListScroll .playList:hover{
+    color: black;
+    transition: 0.3s;
+}
+
+.playListContainer .playListScroll .playList i{
+    font-size: 19px;
+}
+
+.trackList .top {
+    display: flex; 
+    align-items: center; 
+    gap: 15px; 
+}
+
+.trackList .top img {
+    width: 40%;
+    border-radius: 20px;
+    margin-top: 30px;
+}
+
+.trackList .top p {
+    display: flex;
+    flex-direction: column; 
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: -20px;
+}
+
+.trackList .top p span {
+    font-size: 14px; 
+    font-weight: normal;
+    color: rgb(255, 255, 255); 
+}
+
+.trackList hr {
+    margin: 15px 0 0 auto; 
+    width: 158px; 
+    border: 1px solid #ccc; 
+    margin-top: -50px;
+    align-items: center;
+}
+
+.trackList .bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.trackList .bottom i {
+    font-size: 20px;
+    color: white;
+    margin-left: 130px;
+}
+
+.trackList .bottom input[type="range"] {
+    flex: 1;
+    width: 100%;
+    max-width: 150px; /* Điều chỉnh độ dài theo ý muốn */
+    appearance: auto;
+    height: 5px;
+    background: #3b06e9;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    margin-bottom: 7px;
+}
+
